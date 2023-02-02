@@ -32,6 +32,7 @@ public class LinkedList<T> {
         //Create a new node
         Node<T> newNode = new Node(key);
         if (head == null) {
+            //If list is empty, both head and tail would point to new node
             head = newNode;
             tail = newNode;
         } else {
@@ -39,10 +40,14 @@ public class LinkedList<T> {
             temp = head;
             current = null;
             for (int i = 0; i < position; i++) {
+                //Node current will point to temp
                 current = temp;
+                //Node temp will point to node next to it.
                 temp = temp.next;
             }
+            //current will point to new node
             current.next = newNode;
+            //new node will point to temp
             newNode.next = temp;
         }
 
@@ -81,39 +86,11 @@ public class LinkedList<T> {
             }
         }
     }
-    public Node<T> searchNode(T key) {
-        Node<T> current = head;
-        Node<T> tempNode = null;
-        int i = 1;
-        boolean flag = false;
-        if(head == null) {
-            System.out.println("List is empty");
-        }
-        else {
-            while(current != null) {
-                if(current.key == key) {
-                    flag = true;
-                    tempNode = current;
-
-                    break;
-                }
-                i++;
-                current = current.next;
-            }
-        }
-        if(flag)
-            return tempNode;
-        else
-            System.out.println("Element is not present in the list");
-        return null;
-    }
-    public void searchAndInsert(T searchKey,T insertKey) {
-        Node<T> searchNode = searchNode(searchKey);//30
-        Node<T> temp=searchNode.next;
-        Node<T> newNode = new Node<>(insertKey);//40
-        if (searchNode!=null){
-            searchNode.next=newNode;//30=>40
-            newNode.next=temp;//40=?70
-        }}
 }
+
+
+
+
+
+
 

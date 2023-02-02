@@ -1,6 +1,7 @@
 package com.bridgelabz.datastructure;
 
 import java.util.LinkedList;
+
 public class LinkedListMain {
     public static void main(String[] args) {
         LinkedList<Integer> linkedList1 = new LinkedList<>();
@@ -9,14 +10,17 @@ public class LinkedListMain {
         linkedList1.push(56);
         linkedList1.display();
 
-	            linkedList1.pop();
-	            linkedList1.display();
+//	            linkedList1.pop();
+//	            linkedList1.display();
 
-	            linkedList1.popLast();
-	            linkedList1.display();
-        linkedList1.searchNode(30);
-        linkedList1.searchAndInsert(30,40);
+        linkedList1.popLast();
         linkedList1.display();
+    }}
 
-    }
-}
+
+
+
+
+
+
+
