@@ -10,16 +10,19 @@ public class LinkedListMain {
         linkedList1.push(56);
         linkedList1.display();
 
-//            linkedList1.pop();
-//            linkedList1.display();
+//	            linkedList1.pop();
+//	            linkedList1.display();
 
-//            linkedList1.popLast();
-//            linkedList1.display();
+//	            linkedList1.popLast();
+//	            linkedList1.display();
         linkedList1.searchNode(30);
+        linkedList1.searchAndInsert(30,40);
+        linkedList1.display();
 
     }
-
 }
+
+
 
 
 
