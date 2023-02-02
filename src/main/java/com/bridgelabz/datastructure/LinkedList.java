@@ -67,8 +67,27 @@ public class LinkedList<T> {
             }
         }
     }
-
+    public void  popLast(){
+        if(head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+        else {
+            if(head != tail ) {
+                Node current = head;
+                while(current.next != tail) {
+                    current = current.next;
+                }
+                tail = current;
+                tail.next = null;
+            }
+            else {
+                head = tail = null;
+            }
+        }
+    }
 }
+
 
 
 
